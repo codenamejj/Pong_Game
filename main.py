@@ -37,14 +37,15 @@ while game_on:
 
     if ball.xcor() > 390:
         score.left_score += 1
-        ball.ball_speed -= 1
         ball.ball_reset()
 
     elif ball.xcor() < - 390:
         score.right_score += 1
         ball.ball_reset()
+        
     if ball.speed() < 0:
         ball.ball_speed = 0
+        
     score.clear()
     score.show_l_score()
     score.show_r_score()
